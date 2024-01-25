@@ -26,10 +26,12 @@ export class MyRoom extends Room<MyRoomState> {
 
         // place Player at a random position in the floor
         const FLOOR_SIZE = 500;
-        player.x = -(FLOOR_SIZE/2) + (Math.random() * FLOOR_SIZE);
+        // player.x = -(FLOOR_SIZE/2) + (Math.random() * FLOOR_SIZE);
+        // player.y = -1;
+        // player.z = -(FLOOR_SIZE/2) + (Math.random() * FLOOR_SIZE);
+        player.x = 0;
         player.y = -1;
-        player.z = -(FLOOR_SIZE/2) + (Math.random() * FLOOR_SIZE);
-
+        player.z = 0;
         // place player in the map of players by its sessionId
         // (client.sessionId is unique per connection!)
         this.state.players.set(client.sessionId, player);
